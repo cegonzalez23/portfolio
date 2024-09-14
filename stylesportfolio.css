@@ -151,23 +151,25 @@ section.special, article.special {
     text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
-    nav {
-        padding: 8px; 
-    }
 
-    nav ul {
-        align-items: center; 
-    }
+@media screen and (max-width: 400px) {
+	#nav {
+		padding: 8px;
+	}
 
-    nav li {
-        margin: 8px 0; 
-    }
+	#nav ul {
+		align-items: center;
+	}
 
-    nav a {
-        font-size: 11px; 
-    }
+	#nav ul li {
+		margin: 8px 0;
+	}
+
+	#nav ul li a {
+		font-size: 11px;
+	}
 }
+
 
 
 
