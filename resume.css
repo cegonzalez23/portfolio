@@ -103,7 +103,7 @@ html {
     border-top-right-radius: 0.25em;
     cursor: default;
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    box-sizing: border-box;
 }
 
 #nav ul {
@@ -165,26 +165,25 @@ html {
 .trayecto-header {
     display: flex;
     align-items: center;
-    justify-content: center; /* Alinea el contenido al centro */
+    justify-content: center;
     gap: 5em;
-    flex-wrap: wrap; /* Ajusta en pantallas pequeñas */
-    background-color: #eae6e6; /* Fondo para todo el contenedor */
-    padding: 20px; /* Espacio interno */
+    flex-wrap: wrap; 
+    background-color: #eae6e6; 
+    padding: 20px; 
 }
 
 .trayecto-header h1 {
     margin: 0;
-    background-color: #ffffff; /* Fondo para el h1 */
-    padding: 10px; /* Espacio interno del h1 */
-    border-radius: 8px; /* Bordes redondeados si es necesario */
+    background-color: #ffffff; 
+    padding: 10px; 
+    border-radius: 8px; 
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para mejor visibilidad */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
-/* Si necesitas ajustar el diseño del h1 en pantallas pequeñas */
 @media screen and (max-width: 768px) {
     .trayecto-header {
-        gap: 2em; /* Reduce el espacio entre elementos en pantallas pequeñas */
+        gap: 2em; 
     }
 }
 
@@ -238,7 +237,7 @@ html {
 /* Main Content */
 main {
     width: 100%;
-    max-width: 1200px; /* Consistent with other pages */
+    max-width: 1200px; 
     margin: 30px auto;
     padding: 20px;
     border-top-left-radius: 10%;
@@ -260,7 +259,7 @@ article {
 
 /* Headings and Text */
 h2, h3 {
-    color: #321939; /* Consistent with other pages */
+    color: #321939; 
 }
 h1 {
     font-weight: 300;
