@@ -88,22 +88,23 @@ html {
     text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
-    nav {
-        padding: 8px; /* Ajusta el padding para pantallas pequeñas */
-    }
 
-    nav ul {
-        align-items: center; /* Centra los elementos */
-    }
+@media screen and (max-width: 400px) {
+	#nav {
+		padding: 8px;
+	}
 
-    nav li {
-        margin: 8px 0; /* Ajusta el espaciado entre los elementos en columna */
-    }
+	#nav ul {
+		align-items: center;
+	}
 
-    nav a {
-        font-size: 11px; /* Ajusta el tamaño del texto */
-    }
+	#nav ul li {
+		margin: 8px 0;
+	}
+
+	#nav ul li a {
+		font-size: 11px;
+	}
 }
 
 
