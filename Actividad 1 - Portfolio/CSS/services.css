@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background: #FFFFFF;
+}
+header {
+    background: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 10px 0; 
+}
+
+
+img {
+    width: 5%;
+    justify-content: right;
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+nav li {
+    margin: 0 80px; /* Espaciado entre los elementos de la lista */
+}
+
+nav a{
+    text-decoration: none;
+    color: #5d4e4e; 
+    font-size: 16px; 
+}
+nav a:hover{
+    color:rgb(158, 136, 153)
+}
+
+
+/* Main Content */
+main {
+    width: 100%;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+/* Headings and Text */
+h1, h2 {
+    color: #000; /* Igual que en index y portfolio */
+}
+
+h1 {
+    font-size: 36px; /* Igual que en index */
+}
+
+h2 {
+    font-size: 28px; /* Igual que en index */
+}
+
+p {
+    font-size: 18px; /* Igual que en index y portfolio */
+    color: #333; /* Igual que en index y portfolio */
+}
+
+/* Footer */
+footer {
+    background: #f8f8f8; /* Igual que en index y portfolio */
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px; /* Igual que en index y portfolio */
+    color: #666; /* Igual que en index y portfolio */
+}
