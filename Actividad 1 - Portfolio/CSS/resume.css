@@ -1,0 +1,387 @@
+/* Reseteo General: Elimina márgenes, rellenos y bordes por defecto, y establece una fuente base */
+html, body, div, span, h3, h4, h5, h6, p, footer, header, section {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina los rellenos predeterminados */
+    border: 0; /* Elimina los bordes por defecto */
+    font-size: 100%; /* Establece un tamaño de fuente estándar */
+    font-family: "Source Sans Pro", Helvetica, sans-serif; /* Establece la fuente base */
+}
+
+/* Estilos básicos del cuerpo de la página */
+body {
+    background-color: #935d8c; /* Color de fondo base */
+    background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%); /* Imagen de fondo y gradiente */
+    color: rgba(255, 255, 255, 0.65); /* Color del texto con opacidad */
+    font-size: 17pt; /* Tamaño de fuente */
+    font-weight: 300; /* Peso de fuente */
+    line-height: 1.65; /* Espaciado entre líneas */
+}
+
+/* Ajustes de viewport para Internet Explorer */
+@-ms-viewport {
+    width: device-width; /* Ajusta el viewport en IE */
+}
+
+/* Ajustes de box-sizing para todos los elementos */
+html {
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho y alto de los elementos */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* Hereda el box-sizing para todos los elementos */
+}
+
+/* Ajustes responsivos para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px; /* Establece un ancho mínimo para pantallas pequeñas */
+    }
+}
+
+/* Ajuste de fuente para pantallas medianas */
+@media screen and (max-width: 1680px) {
+    body, input, select, textarea {
+        font-size: 14pt; /* Ajusta el tamaño de la fuente para pantallas medianas */
+    }
+}
+
+/* Ajuste de fuente para pantallas aún más pequeñas */
+@media screen and (max-width: 1280px) {
+    body, input, select, textarea {
+        font-size: 12pt; /* Ajusta el tamaño de la fuente para pantallas pequeñas */
+    }
+}
+
+/* Estilos para la barra de navegación (Navbar) */
+#nav {
+    background-color: #f7f7f7; /* Fondo del menú de navegación */
+    color: #636363; /* Color del texto */
+    position: fixed; /* Fija la barra en la parte superior */
+    width: 100%; /* Ancho completo */
+    top: 0; /* Posición superior */
+    left: 0; /* Posición izquierda */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    padding: 1em; /* Espaciado dentro de la barra */
+    border-top-left-radius: 0.25em; /* Bordes redondeados en la parte superior izquierda */
+    border-top-right-radius: 0.20em; /* Bordes redondeados en la parte superior derecha */
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+/* Estilo del icono de menú hamburguesa */
+.hamburger {
+    font-size: 24px; /* Tamaño del ícono */
+    cursor: pointer; /* Cambio de cursor para indicar que es clickeable */
+    display: none; /* Oculto por defecto en pantallas grandes */
+    position: absolute; /* Posicionamiento absoluto */
+    right: 20px; /* Ubicación a la derecha */
+    top: 0; /* Ubicación en la parte superior */
+}
+
+/* Estilos para los elementos de la lista en la barra de navegación */
+#nav ul {
+    margin: 0; /* Elimina márgenes */
+    padding: 0; /* Elimina relleno */
+    list-style: none; /* Elimina los puntos de lista */
+    display: flex; /* Muestra los elementos en una fila */
+    justify-content: center; /* Centra los elementos */
+}
+
+/* Estilos de los elementos de la lista */
+#nav ul li {
+    margin: 0 0.35em; /* Espaciado entre los elementos */
+}
+
+/* Estilo de los enlaces en el menú de navegación */
+#nav ul li a {
+    display: inline-block; /* Hace que los enlaces sean en línea pero con propiedades de bloque */
+    height: 2.25em; /* Altura de los enlaces */
+    line-height: 2.25em; /* Centra verticalmente el texto */
+    padding: 0 3.25em; /* Espaciado dentro de los enlaces */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: inset 0 0 0 1px transparent; /* Sombra interna sutil */
+    color: #636363; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Muestra el menú hamburguesa en dispositivos móviles */
+    }
+    
+    #nav ul {
+        flex-direction: column; /* Muestra los elementos en columna */
+        position: absolute; /* Posiciona el menú en modo absoluto */
+        background-color: #f7f7f7; /* Fondo del menú */
+        width: 100%; /* Ancho completo */
+        top: 60px; /* Posiciona el menú debajo de la barra de navegación */
+        left: 0; /* Posiciona el menú a la izquierda */
+        padding: 1em; /* Relleno del menú */
+        display: none; /* Oculta el menú por defecto */
+    }
+
+    #nav ul li {
+        margin: 0.5em; /* Aumenta el espaciado entre los elementos */
+    }
+
+    #nav ul.active {
+        display: flex; /* Muestra el menú cuando se activa */
+    }
+}
+
+/* Estilos para el encabezado */
+#header {
+    padding-top: 5em; /* Espaciado superior */
+    padding-bottom: 1em; /* Espaciado inferior */
+    text-align: center; /* Centra el texto */
+    background-color: transparent; /* Fondo transparente */
+}
+
+/* Estilo para el encabezado del portfolio */
+.trayecto-header {
+    display: flex; /* Usa flexbox para los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 5em; /* Espaciado entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    background-color: #eae6e6; /* Fondo gris claro */
+    padding: 20px; /* Relleno */
+}
+
+/* Estilo del título en el encabezado del portfolio */
+.trayecto-header h1 {
+    margin: 0; /* Elimina márgenes */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 10px; /* Relleno */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Ajustes en el encabezado del portfolio para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .trayecto-header {
+        gap: 2em; /* Reduce el espaciado entre los elementos */
+    }
+}
+
+/* Estilo para la experiencia */
+#experience {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 1em;
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo de los botones toggle (para mostrar/ocultar contenido) */
+.toggle-checkbox {
+    display: none; /* Oculta el checkbox */
+}
+
+.toggle-btn {
+    background-color: #965ebe; /* Color de fondo del botón */
+    color: rgb(255, 255, 255); /* Color del texto del botón */
+    border: none; /* Elimina el borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 0.5em; /* Relleno */
+    font-size: 1em; /* Tamaño de la fuente */
+    cursor: pointer; /* Cursor de mano */
+    display: inline-block; /* Hace que el botón sea en línea pero con propiedades de bloque */
+    max-width: 200px; /* Ancho máximo */
+    margin: 1px; /* Margen */
+    text-align: center; /* Centra el texto dentro del botón */
+    box-sizing: border-box; /* Ajusta el tamaño del botón */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.toggle-btn:hover {
+    background-color: #bfbebf; /* Cambia el fondo al pasar el ratón */
+}
+
+/* Estilo del contenido de la experiencia */
+.experience-content {
+    display: none; /* Oculta el contenido por defecto */
+    padding: 1em; /* Relleno */
+    background-color: #f7f7f7; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Muestra el contenido cuando el checkbox está marcado */
+.toggle-checkbox:checked + .toggle-btn + .experience-content {
+    display: block; /* Muestra el contenido */
+}
+
+/* Estilos generales para el contenido principal */
+main {
+    width: 100%; /* Ancho completo */
+    max-width: 1200px; /* Ancho máximo */
+    margin: 30px auto; /* Centrado con márgenes */
+    padding: 20px; /* Relleno */
+    border-top-left-radius: 10%; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #636363; /* Color del texto */
+    border-radius: 0.25em; /* Bordes redondeados */
+    margin-bottom: 40px; /* Margen inferior */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos de las secciones */
+section {
+    padding: 20px; /* Relleno */
+}
+
+article {
+    margin-bottom: 20px; /* Margen inferior */
+}
+
+/* Estilos de los encabezados */
+h2, h3 {
+    color: #321939; /* Color oscuro */
+}
+
+h1 {
+    font-weight: 300; /* Peso ligero */
+    color: #fcf3fe; /* Color claro */
+}
+
+h2 {
+    font-size: 2em; /* Tamaño de fuente grande */
+}
+
+h3 {
+    font-size: 24px; /* Tamaño de fuente */
+}
+
+p {
+    font-size: 18px; /* Tamaño de fuente para párrafos */
+    color: #333; /* Color del texto */
+}
+
+ul {
+    padding-left: 20px; /* Relleno izquierdo */
+    list-style: disc; /* Lista con puntos */
+}
+
+/* Estilos del contenedor de habilidades */
+#skills-container {
+    display: flex; /* Usa flexbox */
+    justify-content: space-between; /* Espaciado entre las columnas */
+    gap: 10px; /* Espaciado entre columnas */
+}
+
+#skills-container .column {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+}
+
+#skills-container h2 {
+    font-size: 1.5em; /* Tamaño de fuente */
+}
+
+#skills-container ul {
+    list-style-type: disc; /* Lista con puntos */
+}
+
+/* Ajustes en habilidades para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    #skills-container {
+        flex-direction: column; /* Dispone las columnas en fila */
+    }
+}
+
+/* Estilos de la sección de descarga de CV */
+#download-cv {
+    text-align: center; /* Centra el texto */
+    margin-top: 5px; /* Margen superior */
+    padding: 18px; /* Relleno */
+    background-color: #f7f7f7; /* Fondo gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos del párrafo en la sección de descarga */
+#download-cv p {
+    padding: 20px; /* Relleno */
+    margin: 1em; /* Márgenes */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #eae6e6; /* Fondo gris claro */
+}
+
+/* Estilo del botón de descarga */
+#download-cv .button {
+    background-color: #785591; /* Fondo oscuro */
+    color: white; /* Color de texto */
+    padding: 0.75em 1.5em; /* Relleno */
+    text-decoration: none; /* Elimina subrayado */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1.2em; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+/* Estilo cuando se pasa el ratón sobre el botón */
+#download-cv .button:hover {
+    background-color: #b58cd9; /* Cambio de color en hover */
+}
+
+/* Estilos del pie de página */
+#footer {
+    background-color: #f7f7f7; /* Fondo gris claro */
+    text-align: center; /* Centra el texto */
+}
+
+#footer h2 {
+    font-size: 1em; /* Tamaño de fuente */
+    color: black; /* Color de texto */
+}
+
+#footer p {
+    font-size: 1em; /* Tamaño de fuente */
+    color: #636363; /* Color de texto */
+}
+
+#footer section {
+    padding: 1%; /* Relleno */
+}
+
+/* Estilo para los íconos sociales */
+.social-icons {
+    display: flex; /* Flexbox para los íconos */
+    justify-content: center; /* Centra los íconos */
+    gap: 1em; /* Espaciado entre los íconos */
+}
+
+.social-icons a {
+    display: inline-block; /* Los íconos se alinean en línea */
+    width: 2.5em; /* Tamaño de los íconos */
+    height: 2.5em;
+}
+
+.social-icons img {
+    max-width: 100%; /* Asegura que los íconos no se desborden */
+    max-height: 100%;
+    display: block; /* Los íconos son bloques */
+}
+
+/* Ajustes responsivos para pantallas muy pequeñas */
+@media screen and (max-width: 400px) {
+    #footer {
+        padding: 3em 2em 1em 2em; /* Ajusta el padding */
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media screen and (max-width: 406px) {
+    #footer {
+        padding: 2em 1.5em 1em 1.5em; /* Ajusta el padding */
+    }
+
+    #footer h2 {
+        font-size: 0em; /* Elimina el tamaño del texto en pantallas pequeñas */
+        font-weight: none;
+    }
+
+    .social-icons a {
+        width: 2em; /* Redimensiona los íconos */
+        height: 2em;
+    }
+}

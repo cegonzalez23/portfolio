@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/stylesportfolio.css"> <!-- Asegúrate de usar el mismo archivo CSS -->
+    <title> Portafolio</title>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="portfolio-header">
+            <h1>¡Conoce mis proyectos!</h1>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="nav">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <ul id="menu" class="hidden">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="portfolio.html">Portafolio</a></li>
+            <li><a href="resume.html">Currículum</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section main special">
+        <div class="portfolio-projects">
+            <!-- Proyecto: Análisis de Spotify -->
+            <div class="project">
+                <div class="project-image">
+                    <h2>Análisis de Spotify</h2>
+                    <img src="/HTML/img/Spotify.png" alt="Spotify Project">
+                </div>
+                <article>
+                    <p>Análisis exhaustivo de las tendencias de los artistas más escuchados en Spotify utilizando Python. El objetivo principal del proyecto fue identificar patrones en la popularidad de los artistas y cómo estos patrones evolucionan a lo largo del tiempo. </p>
+                    <!-- Enlace al proyecto -->
+                    <p><a href="https://github.com/celesteg21/SPOTIFY.Analytics-with-Python" target="_blank" class="project-link">Visita el proyecto aquí</a></p>
+                </article>
+            </div>
+
+            <!-- Proyecto: Análisis de Instagram -->
+            <div class="project">
+                <div class="project-image">
+                    <h2>Análisis de Instagram</h2>
+                    <img src="/HTML/img/analisisInstagram.png" alt="Instagram Project">
+                </div>
+                <article>
+                    <p>A diferencia del proyecto anterior, acá decidí centrarme en el análisis de Instagram. El objetivo principal del proyecto fue identificar patrones y tendencias en la popularidad de los influencers, así como entender cómo su impacto varía según diferentes factores como el tipo de contenido y la demografía de sus seguidores.</p>
+                    <!-- Enlace al proyecto -->
+                    <p><a href="https://github.com/celesteg21/Instagram_Analytics/blob/main/Instagram_Analytics.ipynb" target="_blank" class="project-link">Visita el proyecto aquí</a></p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="herramientas main special">
+        <header class="major">
+            <h2>Herramientas</h2>
+        </header>
+        <ul>
+            <li>Pandas para la manipulación y limpieza de datos.</li>
+            <li>NumPy para cálculos numéricos avanzados.</li>
+            <li>Matplotlib y Seaborn para la visualización gráfica de las tendencias y patrones encontrados.</li>
+            <li>Spotipy, una biblioteca de Python para interactuar con la API de Spotify, lo que facilitó la extracción de datos relevantes.</li>
+        </ul>
+    </section>
+</div>
+    <!-- Footer -->
+    <footer id="footer">
+        <section>
+            <h2>Redes Sociales</h2>
+            <div class="social-icons">
+                <a href="https://wa.me/+5492346505016" target="_blank"><img src="/HTML/img/Whatsapp.png" alt="WhatsApp" class="Whatsapp"></a>
+                <a href="https://www.linkedin.com/in/celeste-gonz%C3%A1lez-b96150151/" target="_blank"><img src="/HTML/img/Linkedin.png" alt="LinkedIn" class="Linkedin"></a>
+                <a href="https://github.com/celesteg21" target="_blank"><img src="/HTML/img/Github.png" alt="GitHub" class="Github"></a>
+            </div>
+        </section>
+        <section>
+            <p>Derechos Reservados. &copy; 2024</p>
+        </section>
+    </footer>
+    <button id="scrollToTop" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #321939; color: white; border: none; border-radius: 5px; padding: 10px; cursor: pointer;">
+        ↑ Volver Arriba
+    </button>
+    <script src="/JS/index.js"></script>
+</body>
+</html>
+
+
