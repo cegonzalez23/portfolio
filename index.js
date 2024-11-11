@@ -1,3 +1,7 @@
+// Javascript
+//Este bloque hace que el botón de "scroll to top" aparezca cuando el usuario haga scroll hacia abajo más de 100 píxeles, y lo oculte nuevamente cuando el usuario regrese a la parte superior.
+// Cuando se hace clic, mueve la página a la parte superior con un desplazamiento suave.
+
 document.addEventListener("DOMContentLoaded", function () {
     // Botón de "scroll to top"
     const scrollToTopBtn = document.getElementById("scrollToTop");
@@ -19,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // validacion de formularo
+    // validacion de formularo. 
+    // Valida que los campos ingresados estén completos. Si cualquiera de estos campos no cumple con los requisitos, se muestra un mensaje de error y el formulario no se envía, de lo contrario se envia.
+
     function validateForm() {
         const nombre = document.getElementById('nombre').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -57,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formMessage.textContent = ''; // Limpiar mensaje de error
         return false; // Evitar el envío real del formulario para la demostración
     }
-    
+    //Adicionalmente, le agregué el menú hamburguesa para que performance mejor la vista del celular.
     document.getElementById('hamburger').addEventListener('click', function() {
         const menu = document.getElementById('menu');
         menu.classList.toggle('active'); // Alternar la clase 'active' para mostrar/ocultar el menú
