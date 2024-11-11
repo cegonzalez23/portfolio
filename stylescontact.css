@@ -1,0 +1,290 @@
+/* Reseteo General */
+html, body, div, span, h3, h4, h5, h6, p, footer, header, section {
+    margin: 0;  /* Elimina los márgenes por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    border: 0;  /* Elimina los bordes por defecto */
+    font-size: 100%;  /* Asegura que el tamaño de fuente sea estándar */
+    font-family: "Source Sans Pro", Helvetica, sans-serif;  /* Establece la fuente global */
+}
+
+/* Estilo Básico del Cuerpo */
+body {
+    background-color: #935d8c;  /* Color de fondo principal */
+    background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);  /* Fondo con imagen y gradiente */
+    color: rgba(255, 255, 255, 0.65);  /* Color del texto con opacidad */
+    font-size: 17pt;  /* Tamaño de fuente por defecto */
+    font-weight: 300;  /* Peso de la fuente */
+    line-height: 1.65;  /* Altura de línea para mejorar la legibilidad */
+}
+
+/* Para versiones antiguas de Internet Explorer */
+@-ms-viewport {
+    width: device-width;  /* Ajusta el viewport en IE */
+}
+
+/* Ajuste de box-sizing para incluir borde y padding en el cálculo del ancho y alto */
+html {
+    box-sizing: border-box;
+}
+
+/* Hereda el box-sizing a todos los elementos y sus pseudo-elementos */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Ajustes para pantallas pequeñas (480px o menos) */
+@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px;  /* Establece un ancho mínimo en pantallas pequeñas */
+    }
+}
+
+/* Ajustes para pantallas medianas (1680px o menos) */
+@media screen and (max-width: 1680px) {
+    body, input, select, textarea {
+        font-size: 14pt;  /* Reduce el tamaño de la fuente en pantallas medianas */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (1280px o menos) */
+@media screen and (max-width: 1280px) {
+    body, input, select, textarea {
+        font-size: 12pt;  /* Reduce aún más el tamaño de la fuente en pantallas pequeñas */
+    }
+}
+
+
+/* Estilo para el Navegador (Navbar) */
+#nav {
+    background-color: #f7f7f7;  /* Color de fondo del menú de navegación */
+    color: #636363;  /* Color del texto en el menú */
+    position: fixed;  /* Fija el menú en la parte superior */
+    width: 100%;  /* Ancho completo */
+    top: 0;  /* Se posiciona en la parte superior de la página */
+    left: 0;  /* Se posiciona al lado izquierdo de la página */
+    z-index: 1000;  /* Se asegura de que esté encima de otros elementos */
+    padding: 1em;  /* Espaciado dentro del menú */
+    border-top-left-radius: 0.25em;  /* Bordes redondeados en la parte superior izquierda */
+    border-top-right-radius: 0.20em;  /* Bordes redondeados en la parte superior derecha */
+    text-align: right;  /* Alinea el texto a la derecha */
+}
+
+.hamburger {
+    font-size: 24px;  /* Tamaño del ícono de hamburguesa */
+    cursor: pointer;  /* Cambia el cursor para indicar que es clickeable */
+    display: none;  /* Se oculta inicialmente, se mostrará en pantallas móviles */
+    position: absolute;  /* Se posiciona de manera absoluta */
+    right: 20px;  /* Se coloca a 20px desde el lado derecho */
+    top: 0px;  /* Se coloca en la parte superior */
+}
+
+#nav ul {
+    margin: 0;  /* Elimina márgenes */
+    padding: 0;  /* Elimina rellenos */
+    list-style: none;  /* Elimina los puntos de lista */
+    display: flex;  /* Muestra los elementos de la lista en una fila */
+    justify-content: center;  /* Centra los elementos de la lista */
+}
+
+#nav ul li {
+    margin: 0 0.35em;  /* Espaciado entre los elementos de la lista */
+}
+
+#nav ul li a {
+    display: inline-block;  /* Hace que los enlaces sean elementos en línea pero con algunas propiedades de bloque */
+    height: 2.25em;  /* Altura de cada enlace */
+    line-height: 2.25em;  /* Alineación vertical del texto dentro del enlace */
+    padding: 0 3.25em;  /* Espaciado dentro de cada enlace */
+    border-radius: 8px;  /* Bordes redondeados en los enlaces */
+    box-shadow: inset 0 0 0 1px transparent;  /* Establece una sombra interna para los enlaces */
+    color: #636363;  /* Color del texto de los enlaces */
+    text-decoration: none;  /* Elimina la subrayado de los enlaces */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;  /* Muestra el menú hamburguesa en móviles */
+    }
+    
+    #nav ul {
+        flex-direction: column;  /* Cambia la dirección de los elementos a una columna en dispositivos móviles */
+        position: absolute;  /* Hace que el menú sea absoluto */
+        background-color: #f7f7f7;  /* Fondo del menú en móviles */
+        width: 100%;  /* Ancho completo */
+        top: 60px;  /* Posiciona el menú a 60px desde la parte superior */
+        left: 0;  /* Alinea el menú al lado izquierdo */
+        padding: 1em;  /* Espaciado dentro del menú */
+        display: none;  /* Oculta el menú por defecto */
+    }
+
+    #nav ul li {
+        margin: 0.5em;  /* Aumenta el espaciado entre los elementos del menú */
+    }
+
+    #nav ul.active {
+        display: flex;  /* Muestra el menú cuando se activa */
+    }
+}
+
+/* Header */
+#header {
+    padding: 5em 5em 1em 5em;  /* Espaciado en el encabezado */
+    text-align: center;  /* Centra el texto en el encabezado */
+}
+
+#header h1 {
+    margin: 0 0 0.25em 0;  /* Elimina márgenes y agrega un poco en la parte inferior */
+}
+
+@media screen and (max-width: 736px) {
+    h1 {
+        font-size: 2em;  /* Ajusta el tamaño de fuente de h1 en pantallas pequeñas */
+    }
+}
+
+h1 {
+    font-weight: 300;  /* Peso de la fuente de h1 */
+    color: #fcf3fe;  /* Color de texto de h1 */
+}
+
+.form-group {
+    color: #070607;  /* Color del texto dentro de los grupos de formulario */
+}
+
+/* Main Content */
+main {
+    flex: 1;  /* Hace que el main ocupe todo el espacio disponible */
+    padding: 20px;  /* Agrega un poco de relleno dentro del main */
+}
+
+/* Sección General */
+section {
+    padding: 20px;  /* Relleno de cada sección */
+}
+
+/* Sección de Redes Sociales */
+.social-media {
+    margin-bottom: 40px;  /* Espaciado inferior en la sección de redes sociales */
+}
+
+.social-media ul {
+    list-style: none;  /* Elimina los puntos de lista */
+    padding: 0;  /* Elimina el relleno */
+    margin: 0;  /* Elimina el margen */
+    display: flex;  /* Muestra los elementos en una fila */
+    gap: 20px;  /* Espaciado entre los elementos */
+}
+
+.social-media a {
+    text-decoration: none;  /* Elimina el subrayado de los enlaces */
+    color: #000;  /* Color del texto */
+    display: flex;  /* Hace que los enlaces sean flexibles */
+    align-items: center;  /* Alinea los elementos al centro */
+}
+
+.social-media img {
+    width: 30px;  /* Tamaño de los íconos de redes sociales */
+    height: 30px;  /* Tamaño de los íconos de redes sociales */
+    margin-right: 10px;  /* Espaciado entre el ícono y el texto */
+}
+
+/* Formulario de Contacto */
+.contact-form {
+    max-width: 600px;  /* Máximo ancho del formulario */
+    margin: 0 auto;  /* Centra el formulario */
+    background: #ffffff;  /* Fondo blanco para el formulario */
+    padding: 20px;  /* Relleno dentro del formulario */
+    border-radius: 8px;  /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  /* Sombra sutil alrededor del formulario */
+}
+
+.form-group {
+    margin-bottom: 15px;  /* Espaciado entre los grupos de formulario */
+}
+
+label {
+    display: block;  /* Hace que las etiquetas se muestren como bloques */
+    margin-bottom: 5px;  /* Espaciado debajo de las etiquetas */
+    font-weight: bold;  /* Hace que las etiquetas sean negritas */
+}
+
+input, textarea {
+    width: 100%;  /* Los campos de texto ocupan el 100% del ancho disponible */
+    padding: 10px;  /* Relleno dentro de los campos */
+    border: 1px solid #ccc;  /* Borde sutil alrededor de los campos */
+    border-radius: 4px;  /* Bordes ligeramente redondeados */
+}
+
+input:focus, textarea:focus {
+    outline: none;  /* Elimina el borde de enfoque por defecto */
+    border-color: #4327b4;  /* Cambia el color del borde cuando el campo está enfocado */
+}
+
+button {
+    background-color: #4327b4;  /* Fondo morado para el botón */
+    color: #fff;  /* Color blanco para el texto del botón */
+    border: none;  /* Elimina el borde por defecto */
+    padding: 10px 20px;  /* Espaciado dentro del botón */
+    font-size: 16px;  /* Tamaño de fuente para el botón */
+    cursor: pointer;  /* Cambia el cursor a mano para indicar que es clickeable */
+    border-radius: 4px;  /* Bordes redondeados en el botón */
+}
+
+button:hover {
+    background-color: #3a1e8e;  /* Cambia el color del fondo al pasar el ratón sobre el botón */
+}
+
+/* Footer */
+#footer {
+    background-color: #f7f7f7;  /* Fondo gris claro para el pie de página */
+    border-top: solid 1px #dddddd;  /* Borde superior sutil */
+    text-align: center;  /* Centra el contenido del pie de página */
+}
+
+#footer h2 {
+    font-weight: 0;  /* Sin peso en el texto de h2 */
+    font-size: 1em;  /* Tamaño de fuente para h2 */
+    color: #333;  /* Color oscuro para el texto de h2 */
+}
+
+#footer p {
+    color: #636363;  /* Color del texto del párrafo */
+}
+
+.social-icons {
+    display: flex;  /* Muestra los íconos como elementos flexibles */
+    justify-content: center;  /* Centra los íconos */
+    gap: 1em;  /* Espaciado entre los íconos */
+}
+
+.social-icons a {
+    display: inline-block;  /* Hace que los íconos sean elementos en línea */
+    width: 2.5em;  /* Tamaño de los íconos */
+    height: 2.5em;  /* Tamaño de los íconos */
+}
+
+.social-icons img {
+    max-width: 100%;  /* Asegura que las imágenes no se desborden */
+    max-height: 100%;  /* Asegura que las imágenes no se desborden */
+    display: block;  /* Elimina los espacios debajo de las imágenes */
+}
+
+/* Ajustes responsivos para pantallas medianas */
+@media screen and (max-width: 980px) {
+    #footer {
+        padding: 2em 2em 1em 2em;  /* Ajusta el relleno en pantallas medianas */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 736px) {
+    #footer {
+        padding: 2em 1.5em 1em 1.5em;  /* Ajusta el relleno para pantallas más pequeñas */
+    }
+
+    .social-icons a {
+        width: 2em;  /* Ajusto el tamaño de los íconos */
+        height: 2em;  /* Ajusto el tamaño de los íconos */
+    }
+}
